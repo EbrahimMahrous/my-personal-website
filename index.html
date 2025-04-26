@@ -10,6 +10,7 @@
       rel="stylesheet"
       href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
     />
+    <link rel="stylesheet" href="css/all.css" />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,17 +20,30 @@
     />
   </head>
   <body>
+    <!-- Icon whatsapp -->
+    <a
+      href="https://wa.me/+201011501249"
+      class="whatsapp-float"
+      target="_blank"
+    >
+      <i class="bx bxl-whatsapp"></i>
+    </a>
+
     <!--------header---->
     <header>
-      <a href="#" class="logo"><img src="img/Logo (2).png" /></a>
+      <a href="#" class="logo"><img src="img/logo.png" /></a>
       <div class="bx bx-menu" id="menu-icon"></div>
 
       <ul class="navlist">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
+        <!-- <li><a href="#education">Education</a></li> -->
+        <!-- <li><a href="#skills">Skills</a></li> -->
         <li><a href="#service">Service</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <!-- <li><a href="#achievements">Achievements</a></li> -->
+        <!-- <li><a href="#testimonials">Testimonials</a></li> -->
+        <li><a href="#contact">Contact Me</a></li>
       </ul>
       <a href="img/IbrahIm_Mahrous.pdf" class="top-btn">Download CV</a>
     </header>
@@ -38,7 +52,7 @@
     <section class="home" id="home">
       <div class="home-text">
         <h3>Hello, I'm</h3>
-        <h1>Ibrahim MahrOus</h1>
+        <h1 id="typed-name"></h1>
         <h5>A Freelancer <span>From Mansoura city</span></h5>
         <p>
           Tired of slow, clunky websites? <br />
@@ -46,24 +60,26 @@
           apps that users actually enjoy.
         </p>
         <div class="social">
-          <a href="https://www.facebook.com/profile.php?id=100009411936220"
-            ><i class="bx bxl-facebook"></i
-          ></a>
-          <a href="https://www.instagram.com/ebraheem_mahrous_2003/"
-            ><i class="bx bxl-instagram"></i
-          ></a>
           <a href="https://www.linkedin.com/in/ebrahim-mahrous-a3bab018a/"
             ><i class="bx bxl-linkedin"></i
           ></a>
-          <a href="https://www.behance.net/7b746b8d"
-            ><i class="bx bxl-behance"></i
+          <a href="https://github.com/EbrahimMahrous"
+            ><i class="bx bxl-github"></i>
+          </a>
+
+          <a href="https://www.facebook.com/profile.php?id=100009411936220"
+            ><i class="bx bxl-facebook"></i
+          ></a>
+
+          <a href="https://www.instagram.com/ebraheem_mahrous_2003/"
+            ><i class="bx bxl-instagram"></i
           ></a>
         </div>
         <a href="#" class="btn">About Me</a>
       </div>
 
       <div class="home-img">
-        <img src="img/PersonalImage - Copy.png" />
+        <img src="img/profile.png" />
       </div>
     </section>
 
@@ -91,10 +107,12 @@
     </section>
 
     <!-- Education -->
-    <section class="education-section glass">
+    <section class="education-section glass" id="education">
       <h2 class="section-title">EDUCATION</h2>
       <div class="education-details">
-        <p class="bachelor-IS"><strong>Bachelor's Degree in Information Systems</strong></p>
+        <p class="bachelor-IS">
+          <strong>Bachelor's Degree in Information Systems</strong>
+        </p>
         <p>
           Faculty of Computers and Artificial Intelligence, Mansoura University
         </p>
@@ -103,7 +121,7 @@
       </div>
     </section>
     <!-- Skills -->
-    <section class="skills-section glass">
+    <section class="skills-section glass" id="skills">
       <h2 class="section-title">SKILLS</h2>
       <div class="skills-grid">
         <div class="skill-card">
@@ -113,7 +131,7 @@
                 fill="currentColor"
                 d="M12,2A10,10 0 0,1 22,12C22,16.42 19.06,20.17 14.94,21.5C14.5,21.58 14.09,21.3 14,20.85L13.05,16.35C13,16.14 13.08,15.91 13.25,15.76L16.13,13.22C16.66,12.75 16.37,11.84 15.65,11.75L10.25,11.08C9.92,11.04 9.64,10.81 9.55,10.49L8.43,6.53C8.32,6.12 7.91,5.86 7.49,5.94A10,10 0 0,0 2,12C2,17.52 6.48,22 12,22A10,10 0 0,0 12,2Z"
               />
-            </svg>	  
+            </svg>
           </div>
           <p>HTML5, CSS3, Responsive Design</p>
         </div>
@@ -179,24 +197,41 @@
         </div>
       </div>
     </section>
-    <!-- Package -->
-    <section class="packages-section">
-      <h2 class="section-title">Offered Services</h2>
+    <!-- Services -->
+    <section class="packages-section" id="service">
+      <h2 class="section-title">SERVICES</h2>
       <div class="packages-grid">
         <!-- Basic Package -->
         <div class="package-card">
           <h3>Basic Package</h3>
           <p class="discount">20% Discount</p>
-          <p class="price"><s><del style="text-decoration: line-through;">$501</del></s> ➠ <strong>$399</strong></p>
+          <p class="price">
+            <s><del style="text-decoration: line-through">$501</del></s> ➠
+            <strong>$399</strong>
+          </p>
           <ul>
             <li>One-page website (Homepage)</li>
             <li>3 sections of your choice</li>
             <li>1 year free hosting + domain</li>
             <li>1 month free maintenance</li>
-            <li><del style="text-decoration: line-through;">Blog + News page setup</del></li>
-            <li><del style="text-decoration: line-through;">Visitor account feature</del></li>
-            <li><del style="text-decoration: line-through;">Business identity design</del></li>
-            <li><del style="text-decoration: line-through;">SEO optimization</del></li>
+            <li>
+              <del style="text-decoration: line-through"
+                >Blog + News page setup</del
+              >
+            </li>
+            <li>
+              <del style="text-decoration: line-through"
+                >Visitor account feature</del
+              >
+            </li>
+            <li>
+              <del style="text-decoration: line-through"
+                >Business identity design</del
+              >
+            </li>
+            <li>
+              <del style="text-decoration: line-through">SEO optimization</del>
+            </li>
           </ul>
           <a href="#" class="order-btn">Order Now</a>
         </div>
@@ -205,16 +240,31 @@
         <div class="package-card">
           <h3>Premium Package</h3>
           <p class="discount">25% Discount</p>
-          <p class="price"><s><del style="text-decoration: line-through;">$893</del></s> ➠ <strong>$666</strong></p>
+          <p class="price">
+            <s><del style="text-decoration: line-through">$893</del></s> ➠
+            <strong>$666</strong>
+          </p>
           <ul>
             <li>Website with 3 pages</li>
             <li>5 sections of your choice</li>
             <li>1 year free hosting + domain</li>
             <li>1 month free maintenance</li>
-            <li><del style="text-decoration: line-through;">Blog + News setup</del></li>
-            <li><del style="text-decoration: line-through;">Visitor account feature</del></li>
-            <li><del style="text-decoration: line-through;">Business identity design</del></li>
-            <li><del style="text-decoration: line-through;">SEO optimization</del></li>
+            <li>
+              <del style="text-decoration: line-through">Blog + News setup</del>
+            </li>
+            <li>
+              <del style="text-decoration: line-through"
+                >Visitor account feature</del
+              >
+            </li>
+            <li>
+              <del style="text-decoration: line-through"
+                >Business identity design</del
+              >
+            </li>
+            <li>
+              <del style="text-decoration: line-through">SEO optimization</del>
+            </li>
           </ul>
           <a href="#" class="order-btn">Order Now</a>
         </div>
@@ -223,69 +273,33 @@
         <div class="package-card">
           <h3>Business Package</h3>
           <p class="discount">30% Discount</p>
-          <p class="price"><s><del style="text-decoration: line-through;">$1387</del></s> ➠ <strong>$970</strong></p>
+          <p class="price">
+            <s><del style="text-decoration: line-through">$1387</del></s> ➠
+            <strong>$970</strong>
+          </p>
           <ul>
             <li>Website with up to 5 pages</li>
             <li>7 sections of your choice</li>
             <li>1 year free hosting + domain</li>
             <li>3 months free maintenance</li>
             <li>Blog + News + Gallery pages</li>
-            <li><del style="text-decoration: line-through;">Visitor account feature</del></li>
-            <li><del style="text-decoration: line-through;">Advanced SEO setup</del></li>
-            <li><del style="text-decoration: line-through;">Custom business identity design</del></li>
+            <li>
+              <del style="text-decoration: line-through"
+                >Visitor account feature</del
+              >
+            </li>
+            <li>
+              <del style="text-decoration: line-through"
+                >Advanced SEO setup</del
+              >
+            </li>
+            <li>
+              <del style="text-decoration: line-through"
+                >Custom business identity design</del
+              >
+            </li>
           </ul>
           <a href="#" class="order-btn">Order Now</a>
-        </div>
-
-        <!-- Corporate Package -->
-        <div class="package-card">
-          <h3>Corporate Package</h3>
-          <p class="discount">35% Discount</p>
-          <p class="price"><s><del style="text-decoration: line-through;">$2000</del></s> ➠ <strong>$1300</strong></p>
-          <ul>
-            <li>Website with up to 7 pages</li>
-            <li>Full content structure tailored to your business</li>
-            <li>1 year hosting + domain</li>
-            <li>3 months free maintenance</li>
-            <li>Blog, News, Gallery, Testimonials</li>
-            <li>Login system + social media integration</li>
-            <li>Custom business identity design</li>
-            <li>Advanced SEO optimization</li>
-          </ul>
-          <a href="#" class="order-btn">Order Now</a>
-        </div>
-        <!-- E-Commerce Package -->
-        <div class="package-card">
-          <h3>E-Commerce Package</h3>
-          <p class="discount">20% Discount</p>
-          <p class="price"><s><del style="text-decoration: line-through;">$2666</del></s> ➠ <strong>$2133</strong></p>
-          <ul>
-            <li>Full-featured E-commerce website</li>
-            <li>Product catalog + cart + checkout system</li>
-            <li>Payment gateway integration</li>
-            <li>Up to 20 product listings (expandable)</li>
-            <li>Order & inventory management system</li>
-            <li>Hosting + domain for 1 year</li>
-            <li>3 months maintenance</li>
-            <li>SEO optimization for product visibility</li>
-            <li>Social media and WhatsApp integration</li>
-          </ul>
-          <a href="#" class="order-btn">Start Selling Online</a>
-        </div>
-
-        <!-- Custom Package -->
-        <div class="package-card">
-          <h3>Custom Package</h3>
-          <p class="discount">Tailored to your unique business needs</p>
-          <p class="price">Price: Based on requirements</p>
-          <ul>
-            <li>Any number of pages</li>
-            <li>Custom functionality (booking, CRM, login systems...)</li>
-            <li>UI/UX design tailored to your vision</li>
-            <li>Full integration with your tools</li>
-            <li>Consultation + tech support</li>
-          </ul>
-          <a href="#" class="order-btn">Contact us for a custom quote</a>
         </div>
       </div>
     </section>
@@ -294,7 +308,7 @@
     <section class="portfolio" id="portfolio">
       <div class="heading">
         <h3>Portfolio</h3>
-        <h2>My Amazing Work</h2>
+        <h2>MY AMAZING PROJECTS</h2>
         <p>
           I've been busy past few years, working on some of the best projects.
           Here's a Glimpse!
@@ -342,6 +356,70 @@
         </div>
       </div>
     </section>
+
+    <!-- Premium Offered Services -->
+    <section class="packages-section" id="service">
+      <h2 class="section-title">PREMIUM SERVICES</h2>
+      <div class="packages-grid">
+        <!-- Corporate Package -->
+        <div class="package-card">
+          <h3>Corporate Package</h3>
+          <p class="discount">35% Discount</p>
+          <p class="price">
+            <s><del style="text-decoration: line-through">$2000</del></s> ➠
+            <strong>$1300</strong>
+          </p>
+          <ul>
+            <li>Website with up to 7 pages</li>
+            <li>Full content structure tailored to your business</li>
+            <li>1 year hosting + domain</li>
+            <li>3 months free maintenance</li>
+            <li>Blog, News, Gallery, Testimonials</li>
+            <li>Login system + social media integration</li>
+            <li>Custom business identity design</li>
+            <li>Advanced SEO optimization</li>
+          </ul>
+          <a href="#" class="order-btn">Order Now</a>
+        </div>
+        <!-- E-Commerce Package -->
+        <div class="package-card">
+          <h3>E-Commerce Package</h3>
+          <p class="discount">20% Discount</p>
+          <p class="price">
+            <s><del style="text-decoration: line-through">$2666</del></s> ➠
+            <strong>$2133</strong>
+          </p>
+          <ul>
+            <li>Full-featured E-commerce website</li>
+            <li>Product catalog + cart + checkout system</li>
+            <li>Payment gateway integration</li>
+            <li>Up to 20 product listings (expandable)</li>
+            <li>Order & inventory management system</li>
+            <li>Hosting + domain for 1 year</li>
+            <li>3 months maintenance</li>
+            <li>SEO optimization for product visibility</li>
+            <li>Social media and WhatsApp integration</li>
+          </ul>
+          <a href="#" class="order-btn">Start Selling Online</a>
+        </div>
+
+        <!-- Custom Package -->
+        <div class="package-card">
+          <h3>Custom Package</h3>
+          <p class="discount">Tailored to your unique business needs</p>
+          <p class="price">Price: Based on requirements</p>
+          <ul>
+            <li>Any number of pages</li>
+            <li>Custom functionality (booking, CRM, login systems...)</li>
+            <li>UI/UX design tailored to your vision</li>
+            <li>Full integration with your tools</li>
+            <li>Consultation + tech support</li>
+          </ul>
+          <a href="#" class="order-btn">Contact us for a custom quote</a>
+        </div>
+      </div>
+    </section>
+
     <!-- Achivements -->
     <section class="achievements" id="achievements">
       <div class="heading">
@@ -351,9 +429,10 @@
       </div>
 
       <div class="achievements-content">
-		<!-- 1 -->
+        <!-- 1 -->
         <div class="achievement-card">
           <div class="icon">
+            <!-- <img src="img/graduate2025.png" alt=""> -->
             <i class="fas fa-code"></i>
           </div>
           <div class="content">
@@ -365,7 +444,7 @@
             <span class="date">2025</span>
           </div>
         </div>
-		<!-- 2 -->
+        <!-- 2 -->
         <div class="achievement-card">
           <div class="icon">
             <i class="fas fa-rocket"></i>
@@ -419,48 +498,48 @@
 
       <div class="testimonials-content">
         <div class="testimonial-card">
-          <p class="quote">
-            "Ibrahim delivered an outstanding website for our company. His
-            design skills and attention to detail are top-notch. Highly
-            recommend!"
-          </p>
           <div class="client-info">
-            <img src="img/client1.jpg" alt="Client 1" />
+            <img src="img/Faisal Al-Otaibi.jpg" alt="Client 1" />
             <div>
               <h4>Faisal Al-Otaibi</h4>
               <p>CEO, Tech Innovations</p>
             </div>
           </div>
+          <p class="quote">
+            "Ibrahim delivered an outstanding website for our company. His
+            design skills and attention to detail are top-notch. Highly
+            recommend!"
+          </p>
         </div>
 
         <div class="testimonial-card">
-          <p class="quote">
-            "Working with Ibrahim was an absolute pleasure. The website he
-            created exceeded our expectations, and he was very professional
-            throughout the process."
-          </p>
           <div class="client-info">
-            <img src="img/client2.jpg" alt="Client 2" />
+            <img src="img/Haya Al-Dossari.jpg" alt="Client 2" />
             <div>
               <h4>Haya Al-Dossari</h4>
               <p>Founder, Creative Studio</p>
             </div>
           </div>
+          <p class="quote">
+            "Working with Ibrahim was an absolute pleasure. The website he
+            created exceeded our expectations, and he was very professional
+            throughout the process."
+          </p>
         </div>
 
         <div class="testimonial-card">
-          <p class="quote">
-            "Excellent work! Ibrahim was attentive to our needs and provided us
-            with a beautiful, functional website. We are thrilled with the
-            results!"
-          </p>
           <div class="client-info">
-            <img src="img/client3.jpg" alt="Client 3" />
+            <img src="img/Abdullah Al-Qahtani.jpg" alt="Client 3" />
             <div>
               <h4>Abdullah Al-Qahtani</h4>
               <p>Marketing Director, Global Brands</p>
             </div>
           </div>
+          <p class="quote">
+            "Excellent work! Ibrahim was attentive to our needs and provided us
+            with a beautiful, functional website. We are thrilled with the
+            results!"
+          </p>
         </div>
       </div>
     </section>
@@ -500,8 +579,9 @@
 
     <!--------ends---->
     <div class="ends">
-      <p>Made with love by Ebrahim Ali Mahrous © 2022</p>
+      <p>Crafted with care and creativity by Ibrahim Mahrous &copy; 2022. All rights reserved.</p>
     </div>
+    
 
     <script src="https://unpkg.com/scrollreveal"></script>
 
