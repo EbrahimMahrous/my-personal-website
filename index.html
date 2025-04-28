@@ -1,37 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Personal Portfolio Website 2022</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <!-- Icons -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Personal Portfolio of ibrahim mahrous, showcasing projects, skills, and contact information." />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Ibrahim Mahrous Portfolio</title>
+    <!-- Preload main stylesheet -->
+    <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="css/style.css" /></noscript>
+    <!-- Boxicons CDN (Consider self-hosting for performance) -->
     <link
       rel="stylesheet"
       href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+      integrity="sha384-..."
+      crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="css/all.css" />
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Favicon -->
+    <link rel="icon" href="data:," />
   </head>
-  <body>
-    <!-- Icon whatsapp -->
-    <a
-      href="https://wa.me/+201011501249"
-      class="whatsapp-float"
-      target="_blank"
-    >
-      <i class="bx bxl-whatsapp"></i>
-    </a>
-
     <!--------header---->
     <header>
-      <a href="#" class="logo"><img src="img/logo.png" /></a>
+      <a href="#home" class="logo"><img src="img/logo.png" alt="logo img"/></a>
       <div class="bx bx-menu" id="menu-icon"></div>
 
       <ul class="navlist">
@@ -45,7 +37,7 @@
         <!-- <li><a href="#testimonials">Testimonials</a></li> -->
         <li><a href="#contact">Contact Me</a></li>
       </ul>
-      <a href="img/IbrahIm_Mahrous.pdf" class="top-btn">Download CV</a>
+      <a href="#home" class="top-btn">Download CV</a>
     </header>
 
     <!--------home---->
@@ -60,33 +52,37 @@
           apps that users actually enjoy.
         </p>
         <div class="social">
-          <a href="https://www.linkedin.com/in/ebrahim-mahrous-a3bab018a/"
-            ><i class="bx bxl-linkedin"></i
+          <a href="https://www.linkedin.com/in/ibrahim-mahrous"
+          aria-label="linkedIn profile of Ebrahim Mahrous"
+          ><i class="bx bxl-linkedin"></i
           ></a>
           <a href="https://github.com/EbrahimMahrous"
+          aria-label="Githup profile of Ebrahim Mahrous"
             ><i class="bx bxl-github"></i>
           </a>
 
           <a href="https://www.facebook.com/profile.php?id=100009411936220"
-            ><i class="bx bxl-facebook"></i
+          aria-label="facebook profile of Ebrahim Mahrous"
+          ><i class="bx bxl-facebook"></i
           ></a>
 
           <a href="https://www.instagram.com/ebraheem_mahrous_2003/"
-            ><i class="bx bxl-instagram"></i
+          aria-label="instagram profile of Ebrahim Mahrous"
+          ><i class="bx bxl-instagram"></i
           ></a>
         </div>
-        <a href="#" class="btn">About Me</a>
+        <a href="#about" class="btn">About Me</a>
       </div>
 
       <div class="home-img">
-        <img src="img/profile.png" />
+        <img src="img/profile.png" loading="lazy" alt="home img"/>
       </div>
     </section>
 
     <!--------About---->
     <section class="about" id="about">
       <div class="about-img">
-        <img src="img/g725.png" />
+        <img src="img/g725.png" loading="lazy" alt="about img"/>
       </div>
 
       <div class="about-text">
@@ -233,9 +229,12 @@
               <del style="text-decoration: line-through">SEO optimization</del>
             </li>
           </ul>
-          <a href="#" class="order-btn">Order Now</a>
+          <a       
+          href="https://wa.me/+201011501249"
+          target="_blank" class="order-btn"
+          aria-label="order now"
+          >Order Now</a>
         </div>
-
         <!-- Premium Package -->
         <div class="package-card">
           <h3>Premium Package</h3>
@@ -266,9 +265,12 @@
               <del style="text-decoration: line-through">SEO optimization</del>
             </li>
           </ul>
-          <a href="#" class="order-btn">Order Now</a>
+          <a       
+          href="https://wa.me/+201011501249"
+          target="_blank" class="order-btn"
+          aria-label="order now"
+          >Order Now</a>
         </div>
-
         <!-- Business Package -->
         <div class="package-card">
           <h3>Business Package</h3>
@@ -299,7 +301,11 @@
               >
             </li>
           </ul>
-          <a href="#" class="order-btn">Order Now</a>
+          <a       
+          href="https://wa.me/+201011501249"
+          target="_blank" class="order-btn"
+          aria-label="order now"
+          >Order Now</a>
         </div>
       </div>
     </section>
@@ -316,47 +322,46 @@
       </div>
       <div class="portfolio-content">
         <div class="col">
-          <img src="img/A.jpg" />
+          <img src="img/A.jpg" loading="lazy" alt="proj1"/>
           <div class="layer">
             <h3>Burger Ads</h3>
           </div>
         </div>
         <div class="col">
-          <img src="img/B.jpg" />
+          <img src="img/B.jpg" loading="lazy" alt="proj2"/>
           <div class="layer">
             <h3>Book Store</h3>
             <h5>Logo Design</h5>
           </div>
         </div>
         <div class="col">
-          <img src="img/C.jpg" />
+          <img src="img/C.jpg" loading="lazy" alt="proj3"/>
           <div class="layer">
             <h3>Italian Food</h3>
           </div>
         </div>
         <div class="col">
-          <img src="img/D.jpg" />
+          <img src="img/D.jpg" loading="lazy" alt="proj4"/>
           <div class="layer">
             <h3>Business card</h3>
             <h5>L'Cran</h5>
           </div>
         </div>
         <div class="col">
-          <img src="img/E.jpg" />
+          <img src="img/E.jpg" loading="lazy" alt="proj5"/>
           <div class="layer">
             <h3>AI Generator</h3>
             <h5>Midjourney</h5>
           </div>
         </div>
         <div class="col">
-          <img src="img/F.png" />
+          <img src="img/F.png" loading="lazy" alt="proj6"/>
           <div class="layer">
             <h3>Social Media Ads</h3>
           </div>
         </div>
       </div>
     </section>
-
     <!-- Premium Offered Services -->
     <section class="packages-section" id="service">
       <h2 class="section-title">PREMIUM SERVICES</h2>
@@ -379,7 +384,11 @@
             <li>Custom business identity design</li>
             <li>Advanced SEO optimization</li>
           </ul>
-          <a href="#" class="order-btn">Order Now</a>
+          <a       
+          href="https://wa.me/+201011501249"
+          target="_blank" class="order-btn"
+          aria-label="order now"
+          >Order Now</a>
         </div>
         <!-- E-Commerce Package -->
         <div class="package-card">
@@ -400,9 +409,12 @@
             <li>SEO optimization for product visibility</li>
             <li>Social media and WhatsApp integration</li>
           </ul>
-          <a href="#" class="order-btn">Start Selling Online</a>
+          <a       
+          href="https://wa.me/+201011501249"
+          target="_blank" class="order-btn"
+          aria-label="order now"
+          >Start Selling Online</a>
         </div>
-
         <!-- Custom Package -->
         <div class="package-card">
           <h3>Custom Package</h3>
@@ -415,7 +427,11 @@
             <li>Full integration with your tools</li>
             <li>Consultation + tech support</li>
           </ul>
-          <a href="#" class="order-btn">Contact us for a custom quote</a>
+          <a       
+          href="https://wa.me/+201011501249"
+          target="_blank" class="order-btn"
+          aria-label="order now"
+          >Contact us for a custom quote</a>
         </div>
       </div>
     </section>
@@ -427,13 +443,10 @@
         <h2>My Key Accomplishments</h2>
         <p>Here are some of the milestones I’ve achieved over the years.</p>
       </div>
-
       <div class="achievements-content">
-        <!-- 1 -->
         <div class="achievement-card">
           <div class="icon">
-            <!-- <img src="img/graduate2025.png" alt=""> -->
-            <i class="fas fa-code"></i>
+            <i class='bx bxs-graduation'></i>
           </div>
           <div class="content">
             <h4>Graduated with Honors</h4>
@@ -444,10 +457,9 @@
             <span class="date">2025</span>
           </div>
         </div>
-        <!-- 2 -->
         <div class="achievement-card">
           <div class="icon">
-            <i class="fas fa-rocket"></i>
+            <i class='bx bxl-go-lang'></i>
           </div>
           <div class="content">
             <h4>Launched a Personal Website</h4>
@@ -458,10 +470,9 @@
             <span class="date">2022</span>
           </div>
         </div>
-
         <div class="achievement-card">
           <div class="icon">
-            <i class="fas fa-trophy"></i>
+            <i class='bx bxs-award' ></i>
           </div>
           <div class="content">
             <h4>Awarded Best Developer</h4>
@@ -474,7 +485,7 @@
         </div>
         <div class="achievement-card">
           <div class="icon">
-            <i class="fas fa-users"></i>
+            <i class='bx bxs-bar-chart-alt-2'></i>
           </div>
           <div class="content">
             <h4>Completed 20+ Client Projects</h4>
@@ -499,7 +510,7 @@
       <div class="testimonials-content">
         <div class="testimonial-card">
           <div class="client-info">
-            <img src="img/Faisal Al-Otaibi.jpg" alt="Client 1" />
+            <img src="img/Faisal Al-Otaibi.jpg" loading="lazy" alt="Client 1" />
             <div>
               <h4>Faisal Al-Otaibi</h4>
               <p>CEO, Tech Innovations</p>
@@ -514,7 +525,7 @@
 
         <div class="testimonial-card">
           <div class="client-info">
-            <img src="img/Haya Al-Dossari.jpg" alt="Client 2" />
+            <img src="img/Haya Al-Dossari.jpg" loading="lazy" alt="Client 2" />
             <div>
               <h4>Haya Al-Dossari</h4>
               <p>Founder, Creative Studio</p>
@@ -529,7 +540,7 @@
 
         <div class="testimonial-card">
           <div class="client-info">
-            <img src="img/Abdullah Al-Qahtani.jpg" alt="Client 3" />
+            <img src="img/Abdullah Al-Qahtani.jpg" loading="lazy" alt="Client 3" />
             <div>
               <h4>Abdullah Al-Qahtani</h4>
               <p>Marketing Director, Global Brands</p>
@@ -554,7 +565,7 @@
 
         <div class="action">
           <form
-            action="mailto:your-email@example.com"
+            action="mailto:ebraheemalimahrous@gmail.com"
             method="POST"
             enctype="multipart/form-data"
           >
@@ -563,8 +574,9 @@
               name="email"
               placeholder="Enter Your Email"
               required
+              autocomplete="email"
             />
-            <input type="text" name="subject" placeholder="Subject" required />
+            <input type="text" name="subject" placeholder="Subject" required autocomplete="name"/>
             <textarea
               name="message"
               rows="4"
@@ -578,14 +590,24 @@
     </section>
 
     <!--------ends---->
-    <div class="ends">
-      <p>Crafted with care and creativity by Ibrahim Mahrous &copy; 2022. All rights reserved.</p>
-    </div>
-    
+      <div class="ends" id="ends">
+          <p>Crafted with care and creativity by Ibrahim Mahrous &copy; 2022. All rights reserved.</p>
+      </div>
 
+  
+    <!-- Icon whatsapp -->
+    <a
+      href="https://wa.me/+201011501249"
+      target="_blank"
+      class="whatsapp-float"
+      title="Go to whatsapp"
+    >
+      <i class="bx bxl-whatsapp"></i>
+    </a>
+
+    <!-- library ScrollReveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
-
     <!--------Link to js---->
-    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/script.js" defer></script>
   </body>
 </html>
