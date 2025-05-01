@@ -180,7 +180,8 @@ span {
 }
 .home-img img {
   max-width: 100%;
-  width: 500px;
+  margin-top: 40px;
+  width: 400px;
   height: auto;
 }
 header.sticky {
