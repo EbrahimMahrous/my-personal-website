@@ -7,20 +7,39 @@ let navlist = document.querySelector('.navlist');
 menu.onclick = () => {
 	menu.classList.toggle('bx-x');
 	navlist.classList.toggle('active');
-};
-// window.onscroll = () => {
-// 	menu.classList.remove('bx-x');
-// 	navlist.classList.remove('active');
-// };
-// const sr = ScrollReveal ({
-// 	distance: '45px',
-// 	duration: 2700,
-// 	reset: true
-// })
-// sr.reveal('.home-text',{delay:350, origin:'left'})
-// sr.reveal('.home-img',{delay:350, origin:'right'})
-// sr.reveal('.about, .contact',{delay:200, origin:'bottom'})
-// .about, .education-section, .skills-section, .packages-section, .portfolio, .achievements, .testimonials, .contact, .ends
+}
+// ** Anamition
+window.onscroll = () => {
+	menu.classList.remove('bx-x');
+	navlist.classList.remove('active');
+}
+const sr = ScrollReveal({
+	distance: '60px',
+	duration: 2500,
+	delay: 200,
+	reset: true,
+	easing: 'ease-in-out'
+});
+// Home Section
+sr.reveal('.home-text', { delay: 300, origin: 'left' });
+sr.reveal('.home-img', { delay: 300, origin: 'right' });
+// About Section
+sr.reveal('.about', { delay: 200, origin: 'bottom' });
+// Education, Skills, Packages (Add your actual selectors)
+sr.reveal('.education-section', { delay: 250, origin: 'left', interval: 200 });
+// sr.reveal('.skills-section', { delay: 250, origin: 'right', interval: 200 });
+sr.reveal('.packages-section', { delay: 300, origin: 'bottom', interval: 200 });
+// Portfolio
+sr.reveal('.portfolio .card', { delay: 200, origin: 'top', interval: 100 });
+// Achievements
+sr.reveal('.achievements', { delay: 200, origin: 'bottom', interval: 150 });
+// Testimonials
+sr.reveal('.testimonials .testimonial', { delay: 200, origin: 'left', interval: 100 });
+// Contact & Footer
+sr.reveal('.contact', { delay: 200, origin: 'bottom' });
+sr.reveal('.ends', { delay: 300, origin: 'bottom' });
+
+
 
 // ** Typing
 const text = "Ibrahim Mahrous";
@@ -34,3 +53,27 @@ function typeWriter() {
   }
 }
 window.onload = typeWriter;
+
+
+
+
+// ** Mouse Move
+const cols = document.querySelectorAll('.portfolio-content .col');
+
+cols.forEach(col => {
+  const img = col.querySelector('img');
+
+  col.addEventListener('mousemove', (e) => {
+	const rect = col.getBoundingClientRect();
+	const x = e.clientX - rect.left;
+	const y = e.clientY - rect.top;
+	const moveX = (x / rect.width) * 100;
+	const moveY = (y / rect.height) * 100;
+
+	img.style.transform = `translate(-${moveX / 3}%, -${moveY / 3}%)`;
+  });
+
+  col.addEventListener('mouseleave', () => {
+	img.style.transform = 'translate(0, 0)';
+  });
+});
